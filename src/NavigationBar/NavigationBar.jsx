@@ -2,23 +2,24 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Link } from 'react-router-dom';
 const NavigationBar = () => {
     return (
         <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">Bangali Baburchi</Navbar.Brand>
+        <Navbar.Brand>Bangali Baburchi</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/blog">Blog</Nav.Link>
+          <Nav className="me-auto gap-2">
+            <Link className='text-black text-decoration-none' to={"/"}>Home</Link>
+            <Link className='text-black text-decoration-none' to={"/blog"}>Blog</Link>
+
           </Nav>
-          <Nav>
-            <Nav.Link href="#deets">Login</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
+          <Nav className='gap-2'>
+            <Link className='text-black text-decoration-none' to={"/login"}>Login</Link>
+            <Link className='text-black text-decoration-none' to={"/"}>
               Sign Up
-            </Nav.Link>
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

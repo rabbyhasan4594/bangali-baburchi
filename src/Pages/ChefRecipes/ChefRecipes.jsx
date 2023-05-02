@@ -6,7 +6,6 @@ const ChefRecipes = () => {
     return (
         <div>
             <NavigationBar></NavigationBar>
-          
             <Footer></Footer>
         </div>
     );
