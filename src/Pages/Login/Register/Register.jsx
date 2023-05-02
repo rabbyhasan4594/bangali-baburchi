@@ -4,9 +4,10 @@ import { Button, Container, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 import NavigationBar from '../../../NavigationBar/NavigationBar';
+import { updateProfile } from 'firebase/auth';
 
 const Register = () => {
-    const {createUser} =useContext(AuthContext)
+    const {user,createUser,setProfile} =useContext(AuthContext)
     const handleRegister = event => {
         event.preventDefault();
         const form = event.target;
@@ -14,12 +15,13 @@ const Register = () => {
         const photo = form.photo.value;
         const email = form.email.value;
         const password = form.password.value;
-
+        
         console.log(name, photo, email, password)
         createUser(email, password)
             .then(result => {
                 const createdUser = result.user;
                 console.log(createdUser);
+                setProfile(name,photo,createUser)
             })
             .catch(error => {
                 console.log(error);
