@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
+import NavigationBar from '../../../NavigationBar/NavigationBar';
 
 
 const Login = () => {
@@ -29,7 +30,9 @@ const Login = () => {
     }
 
     return (
-        <Container className='w-25 mx-auto'>
+       <div>
+        <NavigationBar></NavigationBar>
+         <Container className='w-25 mx-auto'>
             <h3>Please Login</h3>
             <Form onSubmit={handleLogin}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -47,7 +50,7 @@ const Login = () => {
                 </Button>
                 <br />
                 <Form.Text className="text-secondary">
-                    Don't Have an Account? <Link to="/register">Register</Link>
+                    Don't Have an Account? <Link to="/registration">Register</Link>
                 </Form.Text>
                 <Form.Text className="text-success">
 
@@ -57,6 +60,7 @@ const Login = () => {
                 </Form.Text>
             </Form>
         </Container>
+       </div>
     );
 };
 
