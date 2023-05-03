@@ -28,8 +28,8 @@ const NavigationBar = () => {
 
                     <Nav>
                         {user ?
-                            <Nav className='pt-2 gap-2 w-25'>
-                                <img style={{ height: "40px", weight: "40px ", borderRadius: " 50%" }} src={user.photoURL} alt="" />
+                            <Nav className='pt-2 gap-2 w-25 '>
+                                <img style={{ height: "40px", weight: "40px "}} src={user.photoURL} alt=""  className='rounded-circle'/>
                                 <Button className='' onClick={handleLogOut} variant="secondary">Logout</Button>
                             </Nav> :
                             <Nav className='gap-2'>
