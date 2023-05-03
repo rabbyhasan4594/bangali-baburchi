@@ -27,8 +27,11 @@ const NavigationBar = () => {
                     </Nav>
 
                     <Nav>
-
-                        {user ? <Button onClick={handleLogOut} variant="secondary">Logout</Button>  :
+                        {user ?
+                            <Nav className='pt-2 gap-2 w-25'>
+                                <img style={{ height: "40px", weight: "40px ", borderRadius: "50% " }} src={user.photoURL} alt="" />
+                                <Button className='' onClick={handleLogOut} variant="secondary">Logout</Button>
+                            </Nav> :
                             <Nav className='gap-2'>
                                 <Link className='text-black text-decoration-none' to={"/login"}>Login</Link>
                                 <Link className='text-black text-decoration-none' to={"/registration"}>
