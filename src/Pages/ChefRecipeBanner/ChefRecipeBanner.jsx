@@ -21,7 +21,7 @@ const ChefRecipeBanner = ({ChefRecipes}) => {
                     <div>
                         <h6>Experience : {years_of_experience} Years</h6>
                         <h6>Number of Recipes : {num_recipes}</h6>
-                        <p>{likes}</p>
+                        <p>Likes : {likes}</p>
                     </div>
                     </Col>
                 </Row>
