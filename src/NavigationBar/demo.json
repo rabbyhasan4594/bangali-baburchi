@@ -1,0 +1,188 @@
+[
+    {
+        "id": 1,
+        "picture": "https://ibtbd.net/wp-content/uploads/2019/11/Chef-Moniruzzaman.jpg",
+        "name": "Arman Rahman",
+        "years_of_experience": 12,
+        "num_recipes": 3,
+        "likes": 1200,
+        "recipes": [
+            {
+                "id": 1,
+                "name": "Beef Bhuna",
+                "ingredients": "beef, onion, ginger paste, garlic paste, chili powder, coriander powder, turmeric, salt, oil",
+                "cooking_method": "Heat oil in a pan and fry the onion until golden brown. Add beef, ginger paste, garlic paste, chili powder, coriander powder, turmeric, and salt. Cook until the beef is tender and the spices are well blended.",
+                "rating": 4.5
+            },
+            {
+                "id": 2,
+                "name": "Shorshe Bata Ilish",
+                "ingredients": "ilish fish, mustard paste, turmeric, salt, green chili, oil",
+                "cooking_method": "Rub the fish with turmeric and salt. Heat oil in a pan and fry the fish until golden brown. In another pan, mix the mustard paste with water and cook until the mixture thickens. Add green chili and pour the mixture over the fish.",
+                "rating": 4.8
+            },
+            {
+                "id": 3,
+                "name": "Aloo Posto",
+                "ingredients": "potato, poppy seeds, mustard oil, green chili, salt",
+                "cooking_method": "Boil potatoes until tender. In another pan, fry the poppy seeds until fragrant. Grind the poppy seeds into a paste and mix with mustard oil. Add the potatoes, green chili, and salt. Cook until the flavors are well combined.",
+                "rating": 4.2
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "picture": "https://ici.edu.bd/wp-content/uploads/2021/11/Daniel_C_Gomes-400x534.jpeg",
+        "name": "Mohammad Ali",
+        "years_of_experience": 15,
+        "num_recipes": 3,
+        "likes": 2300,
+        "recipes": [
+            {
+                "id": 1,
+                "name": "Chicken Curry",
+                "ingredients": "chicken, onion, garlic, ginger, turmeric, chili powder, coriander powder, cumin, garam masala, salt, oil",
+                "cooking_method": "Heat oil in a pan and fry the onion, garlic, and ginger until golden brown. Add chicken, turmeric, chili powder, coriander powder, cumin, garam masala, and salt. Cook until the chicken is tender and the spices are well blended.",
+                "rating": 4.4
+            },
+            {
+                "id": 2,
+                "name": "Mutton Rezala",
+                "ingredients": "mutton, onion, ginger paste, garlic paste, yogurt, poppy seeds, cashew nuts, chili powder, garam masala, salt, oil",
+                "cooking_method": "Heat oil in a pan and fry the onion until golden brown. Add mutton, ginger paste, garlic paste, yogurt, poppy seeds, cashew nuts, chili powder, garam masala, and salt. Cook until the mutton is tender and the spices are well blended.",
+                "rating": 4.7
+            },
+            {
+                "id": 3,
+                "name": "Aloo Posto",
+                "ingredients": "potato, poppy seeds, mustard oil, green chili, salt",
+                "cooking_method": "Boil potatoes until tender. In another pan, fry the poppy seeds until fragrant. Grind the poppy seeds into a paste and mix with mustard oil. Add the potatoes, green chili, and salt. Cook until the flavors are well combined.",
+                "rating": 4.2
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "picture": "https://example.com/chef1.jpg",
+        "name": "Sadia Islam Mou",
+        "years_of_experience": 10,
+        "num_of_recipes": 3,
+        "likes": 2000,
+        "recipes": [
+            {
+                "id": 1,
+                "name": "Chingri Bhapa",
+                "ingredients": "prawns, coconut milk, mustard seeds, green chillies, turmeric powder, salt",
+                "cooking_method": "1. Clean and devein the prawns. 2. Mix the prawns with coconut milk, mustard seeds, green chillies, turmeric powder, and salt. 3. Put the mixture in a steamer and steam for 10-15 minutes. 4. Serve hot.",
+                "rating": 4.5
+            },
+            {
+                "id": 3,
+                "name": "Shorshe Ilish",
+                "ingredients": "hilsa fish, mustard oil, black mustard seeds, turmeric powder, salt, green chillies",
+                "cooking_method": "1. Clean and cut the hilsa fish into pieces. 2. Mix the fish with mustard oil, black mustard seeds, turmeric powder, salt, and green chillies. 3. Cook the mixture on a low flame for 10-15 minutes. 4. Serve hot with steamed rice.",
+                "rating": 4.8
+            },
+            {
+                "id": 3,
+                "name": "Beef Bhuna",
+                "ingredients": "beef, onion, garlic, ginger, red chilli powder, cumin powder, coriander powder, turmeric powder, salt, oil",
+                "cooking_method": "1. Cut the beef into small pieces. 2. Heat oil in a pan and fry the onions until golden brown. 3. Add garlic, ginger, red chilli powder, cumin powder, coriander powder, turmeric powder, and salt. Fry for 2-3 minutes. 4. Add the beef and cook for 10-15 minutes on medium heat until the beef is tender. 5. Serve hot with steamed rice.",
+                "rating": 4.0
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "picture": "https://lesaffre.com.bd/wp-content/uploads/2020/05/Baker-chef-1.jpg",
+        "name": "Nafiz Rahman",
+        "years_of_experience": 12,
+        "num_recipes": 3,
+        "likes": 1100,
+        "recipes": [
+            {
+                "id": 1,
+                "name": "Beef Bhuna",
+                "ingredients": "beef, onion, ginger paste, garlic paste, chili powder, coriander powder, turmeric, salt, oil",
+                "cooking_method": "Heat oil in a pan and fry the onion until golden brown. Add beef, ginger paste, garlic paste, chili powder, coriander powder, turmeric, and salt. Cook until the beef is tender and the spices are well blended.",
+                "rating": 4.5
+            },
+            {
+                "id": 2,
+                "name": "Shorshe Bata Ilish",
+                "ingredients": "ilish fish, mustard paste, turmeric, salt, green chili, oil",
+                "cooking_method": "Rub the fish with turmeric and salt. Heat oil in a pan and fry the fish until golden brown. In another pan, mix the mustard paste with water and cook until the mixture thickens. Add green chili and pour the mixture over the fish.",
+                "rating": 4.8
+            },
+            {
+                "id": 3,
+                "name": "Aloo Posto",
+                "ingredients": "potato, poppy seeds, mustard oil, green chili, salt",
+                "cooking_method": "Boil potatoes until tender. In another pan, fry the poppy seeds until fragrant. Grind the poppy seeds into a paste and mix with mustard oil. Add the potatoes, green chili, and salt. Cook until the flavors are well combined.",
+                "rating": 4.2
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "picture": "https://lesaffre.com.bd/wp-content/uploads/2020/05/baking-center-2.jpg",
+        "name": "Mohammad Hasan",
+        "years_of_experience": 15,
+        "num_recipes": 3,
+        "likes": 3300,
+        "recipes": [
+            {
+                "id": 1,
+                "name": "Chicken Curry",
+                "ingredients": "chicken, onion, garlic, ginger, turmeric, chili powder, coriander powder, cumin, garam masala, salt, oil",
+                "cooking_method": "Heat oil in a pan and fry the onion, garlic, and ginger until golden brown. Add chicken, turmeric, chili powder, coriander powder, cumin, garam masala, and salt. Cook until the chicken is tender and the spices are well blended.",
+                "rating": 4.4
+            },
+            {
+                "id": 2,
+                "name": "Mutton Rezala",
+                "ingredients": "mutton, onion, ginger paste, garlic paste, yogurt, poppy seeds, cashew nuts, chili powder, garam masala, salt, oil",
+                "cooking_method": "Heat oil in a pan and fry the onion until golden brown. Add mutton, ginger paste, garlic paste, yogurt, poppy seeds, cashew nuts, chili powder, garam masala, and salt. Cook until the mutton is tender and the spices are well blended.",
+                "rating": 4.7
+            },
+            {
+                "id": 3,
+                "name": "Aloo Posto",
+                "ingredients": "potato, poppy seeds, mustard oil, green chili, salt",
+                "cooking_method": "Boil potatoes until tender. In another pan, fry the poppy seeds until fragrant. Grind the poppy seeds into a paste and mix with mustard oil. Add the potatoes, green chili, and salt. Cook until the flavors are well combined.",
+                "rating": 4.2
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "picture": "https://www.acdivoca.org/wp-content/uploads/2019/06/Feed-Future-Bangladesh-RDC-Nutri-Champs.jpg",
+        "name": "Sadia Islam",
+        "years_of_experience": 10,
+        "num_of_recipes": 3,
+        "likes": 2300,
+        "recipes": [
+            {
+                "id": 1,
+                "name": "Chingri Bhapa",
+                "ingredients": "prawns, coconut milk, mustard seeds, green chillies, turmeric powder, salt",
+                "cooking_method": "1. Clean and devein the prawns. 2. Mix the prawns with coconut milk, mustard seeds, green chillies, turmeric powder, and salt. 3. Put the mixture in a steamer and steam for 10-15 minutes. 4. Serve hot.",
+                "rating": 4.5
+            },
+            {
+                "id": 3,
+                "name": "Shorshe Ilish",
+                "ingredients": "hilsa fish, mustard oil, black mustard seeds, turmeric powder, salt, green chillies",
+                "cooking_method": "1. Clean and cut the hilsa fish into pieces. 2. Mix the fish with mustard oil, black mustard seeds, turmeric powder, salt, and green chillies. 3. Cook the mixture on a low flame for 10-15 minutes. 4. Serve hot with steamed rice.",
+                "rating": 4.8
+            },
+            {
+                "id": 3,
+                "name": "Beef Bhuna",
+                "ingredients": "beef, onion, garlic, ginger, red chilli powder, cumin powder, coriander powder, turmeric powder, salt, oil",
+                "cooking_method": "1. Cut the beef into small pieces. 2. Heat oil in a pan and fry the onions until golden brown. 3. Add garlic, ginger, red chilli powder, cumin powder, coriander powder, turmeric powder, and salt. Fry for 2-3 minutes. 4. Add the beef and cook for 10-15 minutes on medium heat until the beef is tender. 5. Serve hot with steamed rice.",
+                "rating": 4.0
+            }
+        ]
+    }
+]
