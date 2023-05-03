@@ -4,10 +4,17 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
-import { Button } from 'react-bootstrap';
+import { Button, OverlayTrigger, Tooltip } from 'react-bootstrap';
 
 const NavigationBar = () => {
-    const { user, logOut, loading } = useContext(AuthContext);
+
+
+    const { user, logOut } = useContext(AuthContext);
+    const handleMouseOver = (props) => (
+        <Tooltip id="button-tooltip" {...props}>
+            {user.displayName}
+        </Tooltip>
+    );
 
     const handleLogOut = () => {
         logOut()
@@ -29,7 +36,14 @@ const NavigationBar = () => {
                     <Nav>
                         {user ?
                             <Nav className='pt-2 gap-2 w-25 '>
-                                <img style={{ height: "40px", weight: "40px "}} src={user.photoURL} alt=""  className='rounded-circle'/>
+                                <OverlayTrigger
+                                    placement="right"
+                                    delay={{ show: 250, hide: 400 }}
+                                    overlay={handleMouseOver}
+                                >
+                                   <img style={{ height: "40px", weight: "40px " }} src={user.photoURL} alt="" className='rounded-circle' /> 
+                                </OverlayTrigger>
+                                
                                 <Button className='' onClick={handleLogOut} variant="secondary">Logout</Button>
                             </Nav> :
                             <Nav className='gap-2'>
