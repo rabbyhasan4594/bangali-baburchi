@@ -5,13 +5,13 @@ import Blog from "../Pages/Blog/Blog";
 import Login from "../Pages/Login/Login/Login";
 import Register from "../Pages/Login/Register/Register";
 import ChefSection from "../Pages/ChefSection/ChefSection";
+import ChefRecipes from "../Pages/ChefRecipes/ChefRecipes";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Main></Main>,
         children: [
-            
             {
                 path: "/",
                 element: <ChefSection></ChefSection>,
@@ -21,16 +21,23 @@ const router = createBrowserRouter([
         ]
     },
     {
-        path:"/blog",
-        element:<Blog></Blog>,
+        path: "/blog",
+        element: <Blog></Blog>,
     },
     {
-        path:"/login",
-        element:<Login></Login>,
+        path: "/login",
+        element: <Login></Login>,
     },
     {
         path: '/registration',
         element: <Register></Register>
-    }, 
+    },
+    {
+
+        path: '/chefRecipes/:id',
+        element: <ChefRecipes />,
+        loader: ({params}) => fetch(`http://localhost:5000/chef/${params.id}`)
+
+    }
 ]);
 export default router;
