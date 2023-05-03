@@ -6,11 +6,13 @@ import { Col, Container, Row } from 'react-bootstrap';
 import RightNav from '../RightNav/RightNav';
 import Footer from '../Footer/Footer';
 import LeftNav from '../LeftNav/LeftNav';
+import Banner from '../Pages/Banner/Banner';
 const Main = () => {
 
     return (
         <div>
             <NavigationBar></NavigationBar>
+            <Banner></Banner>
             <Container className='mt-5'>
                 <Row>
                 <Col lg={3}>
