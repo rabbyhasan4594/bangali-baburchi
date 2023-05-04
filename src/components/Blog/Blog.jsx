@@ -3,13 +3,18 @@ import NavigationBar from '../NavigationBar/NavigationBar';
 import { Outlet } from 'react-router-dom';
 import Footer from '../Footer/Footer';
 import { Container } from 'react-bootstrap';
+import Pdf from "react-to-pdf";
+
+
+const ref = React.createRef();
 
 const Blog = () => {
     return (
         <div>
             <NavigationBar></NavigationBar>
             <Container className='gap-5 mt-5 mb-5'>
-                <div>
+                <div ref={ref}>
+               <div>
                     <div>
                         <h3>
                             Question Number:1
@@ -129,9 +134,19 @@ const Blog = () => {
                     </div>
 
                 </div>
+               </div>
+
+                
+               
+
+
 
             </Container>
-
+            <div className='text-center'>
+                <Pdf targetRef={ref} filename="code-example.pdf">
+                    {({ toPdf }) => <button onClick={toPdf}className='btn btn-primary'>Generate Pdf</button>}
+                </Pdf>
+                </div>
             <Footer></Footer>
 
         </div>
