@@ -8,7 +8,6 @@ import ChefRecipeBody from '../ChefRecipeBody/ChefRecipeBody';
 const ChefRecipes = () => {
     const {id} = useParams();
     const ChefRecipes = useLoaderData();
-    console.log(ChefRecipes)
     const recipes=ChefRecipes.recipes;
 
     

@@ -21,11 +21,9 @@ const Register = () => {
         setSuccess('');
         setError('');
         
-        console.log(name, photo, email, password)
         createUser(email, password)
             .then(result => {
                 const createdUser = result.user;
-                console.log(createdUser);
                 setProfile(name,photo,createUser)
                 if (password.length < 6) {
                     setError('Please add at least 6 characters in your password')

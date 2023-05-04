@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 
 const ChefDetails = ({ chef }) => {
     
-    console.log(chef);
     const { name, picture, years_of_experience, num_recipes, likes,id
     } = chef;
     return (

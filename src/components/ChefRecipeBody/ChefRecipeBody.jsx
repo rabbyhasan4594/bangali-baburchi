@@ -4,7 +4,6 @@ import { ToastContainer, toast } from 'react-toast';
 
 
 const ChefRecipeBody = ({ recipes }) => {
-    console.log(recipes)
     const { name, cooking_method, ingredients, rating } = recipes;
     const wave = () => toast('the recipe is your favorite 👋')
     return (
