@@ -15,7 +15,7 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <ChefSection></ChefSection>,
-                loader: () => fetch('http://localhost:5000/chef')
+                loader: () => fetch('https://bangali-baburchi-server-rabbyhasan4594.vercel.app/chef')
             },
         ]
     },
@@ -35,7 +35,7 @@ const router = createBrowserRouter([
 
         path: '/chefRecipes/:id',
         element: <ChefRecipes />,
-        loader: ({params}) => fetch(`http://localhost:5000/chef/${params.id}`)
+        loader: ({params}) => fetch(`https://bangali-baburchi-server-rabbyhasan4594.vercel.app/chef/${params.id}`)
 
     }
 ]);

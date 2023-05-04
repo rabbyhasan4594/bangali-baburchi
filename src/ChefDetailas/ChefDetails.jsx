@@ -14,14 +14,18 @@ const ChefDetails = ({ chef }) => {
                 <Card.Img  variant="top" src={picture} style={{ height: '350px' }} />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
-                    <Card.Text>
+                    <div>
                         <h6>Experience : {years_of_experience
-                        } </h6>
-                        <h6>Numbers of recipes : {num_recipes}</h6>
-                    </Card.Text>
-                    <Card.Text>
-                        <p className='text-end'>Like: {likes}</p>
-                    </Card.Text>
+                        } 
+                        </h6>
+                        
+                    </div>
+                    <div>
+                    <h6>Numbers of recipes : {num_recipes}</h6>
+                    </div>
+                    <div>
+                       <h6> Likes: {likes}</h6>
+                    </div>
                     <Link to={`/chefRecipes/${id}`}><Button variant="primary">View Recipes</Button></Link>
                 </Card.Body>
             </Card>

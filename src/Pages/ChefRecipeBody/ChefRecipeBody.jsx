@@ -8,7 +8,7 @@ const ChefRecipeBody = ({ recipes }) => {
         <div>
             <Container className='p-5'>
                 <Card className='gap-3 mx-lg-5'>
-                    <Card.Header as="h4" className='text-center'>Bangali Baburchi</Card.Header>
+                    <Card.Header as="h5" className='text-center'>Bangali Baburchi</Card.Header>
                     <Card.Body>
                         <Card.Title>{name}</Card.Title>
                         <Card.Text>

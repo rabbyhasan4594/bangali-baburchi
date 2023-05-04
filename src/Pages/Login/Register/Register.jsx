@@ -7,6 +7,8 @@ import NavigationBar from '../../../NavigationBar/NavigationBar';
 import { updateProfile } from 'firebase/auth';
 
 const Register = () => {
+    const [error, setError] = useState('');
+    const [success, setSuccess] = useState('');
     const {user,createUser,setProfile} =useContext(AuthContext)
     const handleRegister = event => {
         event.preventDefault();
@@ -15,6 +17,9 @@ const Register = () => {
         const photo = form.photo.value;
         const email = form.email.value;
         const password = form.password.value;
+        form.reset();
+        setSuccess('');
+        setError('');
         
         console.log(name, photo, email, password)
         createUser(email, password)
@@ -22,11 +27,21 @@ const Register = () => {
                 const createdUser = result.user;
                 console.log(createdUser);
                 setProfile(name,photo,createUser)
+                if (password.length < 6) {
+                    setError('Please add at least 6 characters in your password')
+                    return;
+                    
+                }
+                setSuccess('User has been created successfully');
             })
             .catch(error => {
-                console.log(error);
+                console.error(error.message);
+                setError(error.message);
             })
     }
+
+    
+
 
     
     return (
@@ -65,11 +80,12 @@ const Register = () => {
                     Already Have an Account? <Link to="/login">Login</Link>
                 </Form.Text>
                 <Form.Text className="text-success">
-
+                <p>{success}</p>
                 </Form.Text>
                 <Form.Text className="text-danger">
-
+                 <p>{error}</p>
                 </Form.Text>
+                
             </Form>
         </Container>
       
