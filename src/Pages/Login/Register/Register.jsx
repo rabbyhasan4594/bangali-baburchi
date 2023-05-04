@@ -4,7 +4,7 @@ import { Button, Container, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 import NavigationBar from '../../../NavigationBar/NavigationBar';
-import { updateProfile } from 'firebase/auth';
+
 
 const Register = () => {
     const [error, setError] = useState('');
