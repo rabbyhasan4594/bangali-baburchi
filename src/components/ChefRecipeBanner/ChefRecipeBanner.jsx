@@ -31,7 +31,7 @@ const ChefRecipeBanner = ({ ChefRecipes }) => {
                     </Col>
                 </Row>
             </Container>
-            <Footer></Footer>
+            
         </div>
     );
 };
