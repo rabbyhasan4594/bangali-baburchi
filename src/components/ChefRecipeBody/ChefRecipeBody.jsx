@@ -1,9 +1,12 @@
 import React from 'react';
 import { Button, Card, Container } from 'react-bootstrap';
+import { ToastContainer, toast } from 'react-toast';
+
 
 const ChefRecipeBody = ({ recipes }) => {
     console.log(recipes)
     const { name, cooking_method, ingredients, rating } = recipes;
+    const wave = () => toast('the recipe is your favorite 👋')
     return (
         <div>
             <Container className='p-5'>
@@ -20,7 +23,8 @@ const ChefRecipeBody = ({ recipes }) => {
                         <Card.Text>
                             Rating : {rating}
                         </Card.Text>
-                        <Button variant="primary">Favorite button</Button>
+                        <div><Button onClick={wave} variant="primary">Favorite button</Button>
+                        <ToastContainer /></div>
                     </Card.Body>
                 </Card>
             </Container>

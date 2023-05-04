@@ -10,6 +10,8 @@ const ChefRecipes = () => {
     const ChefRecipes = useLoaderData();
     console.log(ChefRecipes)
     const recipes=ChefRecipes.recipes;
+
+    
     return (
         <div>
             <NavigationBar></NavigationBar>
