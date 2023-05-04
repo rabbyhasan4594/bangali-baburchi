@@ -3,7 +3,7 @@ import React, { useContext, useState } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
-import NavigationBar from '../../../NavigationBar/NavigationBar';
+import NavigationBar from '../../NavigationBar/NavigationBar';
 
 
 const Register = () => {

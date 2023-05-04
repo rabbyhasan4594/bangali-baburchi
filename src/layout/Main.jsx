@@ -1,12 +1,12 @@
 import React from 'react';
 
 import { Outlet } from 'react-router-dom';
-import NavigationBar from '../NavigationBar/NavigationBar';
+import NavigationBar from '../components/NavigationBar/NavigationBar';
 import { Col, Container, Row } from 'react-bootstrap';
-import RightNav from '../RightNav/RightNav';
-import Footer from '../Footer/Footer';
-import LeftNav from '../LeftNav/LeftNav';
-import Banner from '../Pages/Banner/Banner';
+import RightNav from '../components/RightNav/RightNav';
+import Footer from '../components/Footer/Footer';
+import LeftNav from '../components/Banner/LeftNav/LeftNav';
+import Banner from '../components/Banner/Banner';
 const Main = () => {
 
     return (

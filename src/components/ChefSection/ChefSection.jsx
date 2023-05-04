@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
-import ChefDetails from '../../ChefDetailas/ChefDetails';
+import ChefDetails from '../ChefDetails/ChefDetails';
+
 
 const ChefSection = () => {
     const chefs = useLoaderData();

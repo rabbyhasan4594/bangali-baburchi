@@ -1,12 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
-import Home from "../Pages/Home/Home";
-import Blog from "../Pages/Blog/Blog";
-import Login from "../Pages/Login/Login/Login";
-import Register from "../Pages/Login/Register/Register";
-import ChefSection from "../Pages/ChefSection/ChefSection";
-import ChefRecipes from "../Pages/ChefRecipes/ChefRecipes";
-import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import Home from "../components/Home/Home";
+import Blog from "../components/Blog/Blog";
+import Login from "../components/Login/Login/Login";
+import Register from "../components/Login/Register/Register";
+import ChefSection from "../components/ChefSection/ChefSection";
+import ChefRecipes from "../components/ChefRecipes/ChefRecipes";
+import ErrorPage from "../components/ErrorPage/ErrorPage";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -40,7 +41,7 @@ const router = createBrowserRouter([
     {
 
         path: '/chefRecipes/:id',
-        element: <ChefRecipes />,
+        element:  <PrivateRoute><ChefRecipes /></PrivateRoute>,
         errorElement: <ErrorPage />,
         loader: ({params}) => fetch(`https://bangali-baburchi-server-rabbyhasan4594.vercel.app/chef/${params.id}`)
 

@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
-import NavigationBar from '../../../NavigationBar/NavigationBar';
+import NavigationBar from '../../NavigationBar/NavigationBar';
 
 
 const Login = () => {
@@ -10,6 +10,7 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
+
     const [error, setError] = useState('');
 
     const handleLogin = event => {

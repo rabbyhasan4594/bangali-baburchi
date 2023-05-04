@@ -1,7 +1,7 @@
 import React from 'react';
-import NavigationBar from '../../NavigationBar/NavigationBar';
+import NavigationBar from '../NavigationBar/NavigationBar';
 import { Outlet } from 'react-router-dom';
-import Footer from '../../Footer/Footer';
+import Footer from '../Footer/Footer';
 import { Container } from 'react-bootstrap';
 
 const Blog = () => {
