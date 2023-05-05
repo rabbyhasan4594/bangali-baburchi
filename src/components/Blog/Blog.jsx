@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import NavigationBar from '../NavigationBar/NavigationBar';
 import { Outlet } from 'react-router-dom';
 import Footer from '../Footer/Footer';
-import { Container } from 'react-bootstrap';
+import { Container, Spinner } from 'react-bootstrap';
 import Pdf from "react-to-pdf";
+import { AuthContext } from '../../providers/AuthProvider';
 
 
 const ref = React.createRef();
 
 const Blog = () => {
+    const {loading } = useContext(AuthContext);
+    if (loading) {
+        return  <Spinner animation="border" variant="success" />
+    }
     return (
+        
         <div>
             <NavigationBar></NavigationBar>
             <Container className='gap-5 mt-5 mb-5'>

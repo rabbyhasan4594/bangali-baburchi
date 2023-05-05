@@ -46,7 +46,7 @@ const ChefRecipeBody = ({ recipes }) => {
                                     <strong className="me-auto">Bangali Baburchi</strong>
                                     <small>Just Now</small>
                                 </Toast.Header>
-                                <Toast.Body>The recipe is your favorite</Toast.Body>
+                                <Toast.Body className='text-center'>The recipe is your favorite</Toast.Body>
                             </Toast>
                         </div>
                     </Card.Body>
