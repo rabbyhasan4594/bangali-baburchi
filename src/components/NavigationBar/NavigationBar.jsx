@@ -57,8 +57,18 @@ const NavigationBar = () => {
                                 <Button className='' onClick={handleLogOut} variant="secondary">Logout</Button>
                             </Nav> :
                             <Nav className='gap-2'>
-                                <NavLink className='text-black text-decoration-none' to={"/login"}>Login</NavLink>
-                                <NavLink className='text-black text-decoration-none' to={"/registration"}>
+                                <NavLink className='text-black text-decoration-none' to={"/login"}
+                                style={({ isActive, isPending }) => {
+                                    return {
+                                      fontWeight: isActive ? "bold" : "",
+                                      color: isPending ? "red" : "black",
+                                    }}}>Login</NavLink>
+                                <NavLink className='text-black text-decoration-none' to={"/registration"}
+                                style={({ isActive, isPending }) => {
+                                    return {
+                                      fontWeight: isActive ? "bold" : "",
+                                      color: isPending ? "red" : "black",
+                                    }}}>
                                     Register
                                 </NavLink>
                             </Nav>
