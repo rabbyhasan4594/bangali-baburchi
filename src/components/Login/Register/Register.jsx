@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 
-import { Button, Container, Form } from 'react-bootstrap';
+import { Button, Container, Form, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 import NavigationBar from '../../NavigationBar/NavigationBar';
@@ -9,7 +9,7 @@ import NavigationBar from '../../NavigationBar/NavigationBar';
 const Register = () => {
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
-    const {user,createUser,setProfile} =useContext(AuthContext)
+    const {user,createUser,setProfile,loading} =useContext(AuthContext)
     const handleRegister = event => {
         event.preventDefault();
         const form = event.target;
@@ -38,7 +38,9 @@ const Register = () => {
             })
     }
 
-    
+    if (loading) {
+        return  <Spinner animation="border" variant="success" />
+    }
 
 
     
@@ -49,8 +51,8 @@ const Register = () => {
 
    
 
-        <Container className='w-25 mx-auto'>
-            <h3>Please Register</h3>
+        <Container className='w-50 mx-auto bg-light p-4 rounded-4 mt-5'>
+            <h3 className='text-primary text-center mb-3'>Please Register</h3>
             <Form onSubmit={handleRegister}>
                 <Form.Group className="mb-3" controlId="formBasicName">
                     <Form.Label>Name</Form.Label>
@@ -75,7 +77,9 @@ const Register = () => {
                 </Button>
                 <br />
                 <Form.Text className="text-secondary">
+                    <div className='mt-2'>
                     Already Have an Account? <Link to="/login">Login</Link>
+                    </div>
                 </Form.Text>
                 <Form.Text className="text-success">
                 <p>{success}</p>

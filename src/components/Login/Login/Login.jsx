@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Button, Container, Form } from 'react-bootstrap';
+import { Button, Container, Form, Spinner } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGoogle,FaGithub } from 'react-icons/fa';
 import { AuthContext } from '../../../providers/AuthProvider';
@@ -7,7 +7,9 @@ import NavigationBar from '../../NavigationBar/NavigationBar';
 
 
 const Login = () => {
-    const { signIn,signInWithGoogle,signInWithGithub } = useContext(AuthContext);
+   
+    const { signIn,signInWithGoogle,signInWithGithub,loading } = useContext(AuthContext);
+    
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
@@ -23,8 +25,9 @@ const Login = () => {
             console.log(error.message);
         });
         navigate(from, { replace: true })
-
-
+    }
+    if (loading) {
+        return  <Spinner animation="border" variant="success" />
     }
     const handleGithubSignIn =(event)=>{
         signInWithGithub()
@@ -59,8 +62,8 @@ const Login = () => {
     return (
         <div>
             <NavigationBar></NavigationBar>
-            <Container className='mt-5 w-25 mx-lg-auto'>
-                <h3>Please Login</h3>
+            <Container  className='mt-5 w-50 mx-lg-auto bg-light p-4 rounded-4'>
+                <h3 className='text-primary text-center mb-3'>Please Login</h3>
                 <Form onSubmit={handleLogin}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
@@ -81,7 +84,7 @@ const Login = () => {
                     <Button onClick={handleGithubSignIn} className='mb-2 w-100' variant="outline-secondary"><FaGithub />  Login with Github</Button>
                     <br />
                     <Form.Text className="text-secondary">
-                        Don't Have an Account? <Link to="/registration">Register</Link>
+                       <div> Don't Have an Account? <Link to="/registration">Register</Link></div>
                     </Form.Text>
                     <Form.Text className="text-success">
 
