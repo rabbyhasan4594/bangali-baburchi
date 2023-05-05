@@ -1,11 +1,12 @@
-import React from 'react';
-import { Button, Card, Container } from 'react-bootstrap';
-import { ToastContainer, toast } from 'react-toast';
+import React, { useState } from 'react';
+import { Button, Card, Container, Toast } from 'react-bootstrap';
+// import { ToastContainer, toast } from 'react-toast';
 
 
 const ChefRecipeBody = ({ recipes }) => {
     const { name, cooking_method, ingredients, rating } = recipes;
-    const wave = () => toast('the recipe is your favorite 👋')
+    const [showA, setShow] = useState(false);
+    const tostClose = () => setShow(!showA);
     return (
         <div>
             <Container className='p-5'>
@@ -22,8 +23,24 @@ const ChefRecipeBody = ({ recipes }) => {
                         <Card.Text>
                             Rating : {rating}
                         </Card.Text>
-                        <div><Button onClick={wave} variant="primary">Favorite button</Button>
-                        <ToastContainer /></div>
+                        <div>
+
+
+                            <Button onClick={tostClose} className="primary">Favorite button</Button>
+
+                            <Toast show={showA} onClose={tostClose}>
+                                <Toast.Header>
+                                    <img
+                                        src=""
+                                        className="rounded me-2"
+                                        alt=""
+                                    />
+                                    <strong className="me-auto">Bangali Baburchi</strong>
+                                    <small>Just Now</small>
+                                </Toast.Header>
+                                <Toast.Body>The recipe is your favorite</Toast.Body>
+                            </Toast>
+                        </div>
                     </Card.Body>
                 </Card>
             </Container>
