@@ -6,6 +6,11 @@ import { Button, Card, Container, Toast } from 'react-bootstrap';
 const ChefRecipeBody = ({ recipes }) => {
     const { name, cooking_method, ingredients, rating } = recipes;
     const [showA, setShow] = useState(false);
+    const [disabled, setDisabled] = useState(false);
+    const disableButton = () => {
+        setDisabled(true);
+    };
+
     const tostClose = () => setShow(!showA);
     return (
         <div>
@@ -26,7 +31,10 @@ const ChefRecipeBody = ({ recipes }) => {
                         <div>
 
 
-                            <Button onClick={tostClose} className="primary">Favorite button</Button>
+                            <Button disabled={disabled} onClick={() => {
+                                tostClose();
+                                disableButton();
+                            }} className="primary">Favorite button</Button>
 
                             <Toast show={showA} onClose={tostClose}>
                                 <Toast.Header>
